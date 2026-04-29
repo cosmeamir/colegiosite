@@ -199,12 +199,42 @@
                     </div>
                 </div>
             </div>
+
+            <div class="row mt-5">
+                <div class="col-md-4 mb-3">
+                    <div class="card border-0 shadow-sm h-100">
+                        <div class="card-body text-center">
+                            <i class="fa fa-graduation-cap fa-2x text-primary mb-3"></i>
+                            <h5 class="mb-2">Ensino Moderno</h5>
+                            <p class="mb-0">Aulas dinâmicas com foco em teoria e prática para preparar os alunos para o mercado.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <div class="card border-0 shadow-sm h-100">
+                        <div class="card-body text-center">
+                            <i class="fa fa-laptop-code fa-2x text-primary mb-3"></i>
+                            <h5 class="mb-2">Laboratórios Equipados</h5>
+                            <p class="mb-0">Infraestrutura completa para formação técnica em informática, energia e construção civil.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <div class="card border-0 shadow-sm h-100">
+                        <div class="card-body text-center">
+                            <i class="fa fa-user-shield fa-2x text-primary mb-3"></i>
+                            <h5 class="mb-2">Ambiente Seguro</h5>
+                            <p class="mb-0">Espaço acolhedor, organizado e pensado para o desenvolvimento integral do estudante.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div class="text-center mt-4" id="contactos">
                 <h3 class="text-primary">Contactos</h3>
                 <p class="mb-1">Benfica, Rua Direita do BFA, Travessa 11</p>
                 <p class="mb-1">923 070 058 / 923 780 008 / 953 727 801</p>
                 <p class="mb-1">geral@imyj.ao | www.imyj.ao</p>
-                <a href="#" class="btn btn-primary mt-3">Garanta já a vaga do seu filho</a>
+                <button type="button" class="btn btn-primary mt-3" data-toggle="modal" data-target="#admissionModal">Garanta já a vaga do seu filho</button>
             </div>
         </div>
     </div>
@@ -634,6 +664,67 @@ O nosso compromisso é formar jovens capazes, preparados para o futuro e prontos
     </div>
     <!-- Blog End -->
 
+
+
+    <!-- Admission Modal Start -->
+    <div class="modal fade" id="admissionModal" tabindex="-1" role="dialog" aria-labelledby="admissionModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="admissionModalLabel">Pré-inscrição do aluno</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <form id="admissionForm">
+                    <div class="modal-body">
+                        <div class="alert d-none" id="admissionAlert" role="alert"></div>
+                        <div class="form-row">
+                            <div class="form-group col-md-12">
+                                <label for="fullName">Nome completo</label>
+                                <input type="text" class="form-control" id="fullName" name="full_name" required>
+                            </div>
+                            <div class="form-group col-md-8">
+                                <label for="birthDate">Data de nascimento</label>
+                                <input type="date" class="form-control" id="birthDate" name="birth_date" required>
+                            </div>
+                            <div class="form-group col-md-4 d-flex align-items-end">
+                                <div class="bg-light rounded p-2 w-100 text-center">
+                                    <small class="text-muted d-block">Idade atual</small>
+                                    <strong id="studentAge">-</strong>
+                                </div>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="gender">Sexo</label>
+                                <select id="gender" class="form-control" name="gender" required>
+                                    <option value="">Selecione...</option>
+                                    <option value="Masculino">Masculino</option>
+                                    <option value="Feminino">Feminino</option>
+                                </select>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="identityCard">Bilhete de Identidade</label>
+                                <input type="text" class="form-control" id="identityCard" name="identity_card" required>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="studentPhone">Número de telefone do aluno</label>
+                                <input type="tel" class="form-control" id="studentPhone" name="student_phone" required>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="guardianPhone">Número de telefone do encarregado</label>
+                                <input type="tel" class="form-control" id="guardianPhone" name="guardian_phone" required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                        <button type="submit" class="btn btn-primary">Salvar pré-inscrição</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- Admission Modal End -->
 
     <!-- Footer Start -->
     <div class="container-fluid bg-dark text-white py-5 px-sm-3 px-lg-5" style="margin-top: 90px;">
